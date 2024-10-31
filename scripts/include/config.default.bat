@@ -1,0 +1,12 @@
+@echo off
+set "CEL_CONEMU_DIR=%ProgramFiles%\ConEmu"
+set "CEL_CONEMU_PATH=%CEL_CONEMU_DIR%\ConEmu64.exe"
+set "CEL_CONEMU_INIT_SCRIPT=%CEL_CONEMU_DIR%\ConEmu\CmdInit.cmd"
+set "CEL_KITTY_PATH=%ProgramData%\chocolatey\lib\kitty\tools\kitty.exe"
+set "CEL_WSL_PATH=%windir%\system32\wsl.exe"
+set "CEL_TINYWALL_DIR=%ProgramFiles(x86)%\TinyWall"
+set "CEL_TINYWALL_EXE=TinyWall.exe"
+set "CEL_CONEMU_ADMIN_PALETTE=^<ahuh-admin^>"
+set "CEL_CONEMU_PWSH_PALETTE=^<ahuh-pwsh^>"
+set "CEL_CONEMU_WSL_PALETTE=^<ahuh-wsl^>"
+set "CEL_WSL_DISTRIB=Ubuntu"
