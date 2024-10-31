@@ -27,3 +27,21 @@ clink set clink.path "%CONEMU_TOOLKIT_PATH%\lua"
 ```
 
 * You may adapt the configuration to your environment, by modifiying the file `scripts\include\config.bat` (automatically created from `config.default.bat` at first custom launcher execution)
+* Bonus: if you want to use **ConEmu with Clink in VSCode integrated terminal**, add and adapt the following **User Settings** to your environment:
+
+```json
+{
+    // ..
+    "terminal.integrated.defaultProfile.windows": "ConEmu",
+    "terminal.integrated.profiles.windows": {
+        "ConEmu": {
+            "overrideName": true,
+            "path": "${env:windir}\\System32\\cmd.exe",
+            "args": ["/K", "${env:ProgramFiles}\\ConEmu\\ConEmu\\clink\\clink.bat", "inject"],
+            "icon": "terminal"
+        },
+        // ..
+    },
+    "terminal.integrated.fontFamily": "CaskaydiaMono NF"
+}
+```
