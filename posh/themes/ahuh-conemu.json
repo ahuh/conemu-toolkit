@@ -42,7 +42,7 @@
           "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "folder_icon": "\ueaf7",
+            "folder_icon": "\uf141",
             "folder_separator_icon": " \ue0b1 ",
             "home_icon": "\ueb06",
             "style": "agnoster_short",
