@@ -10,10 +10,19 @@
 
 ## Requirements
 
-* **Chocolatey** installed with packages `conemu`, `git`, `oh-my-posh` and `kitty`
+* `choco` installed with packages `conemu`, `git`, `oh-my-posh` and `kitty`
+  * **Chocolatey** → The package manager for windows: https://chocolatey.org/
+  * **ConEmu** → Handy, comprehensive, fast and reliable terminal window: https://conemu.github.io/
+  * **Git** → Free and open source distributed version control system: https://git-scm.com/
+  * **Oh My Posh** → A prompt theme engine for any shell: https://ohmyposh.dev/
+  * **KiTTY** → fork of PuTTY telnet / SSH client with new features: http://www.9bis.net/kitty
+* `clink` installed for ConEmu:
+  * **Clink** → Bash's powerful command line editing in cmd.exe: https://github.com/chrisant996/clink
+  * ConEmu integration: https://conemu.github.io/en/TabCompletion.html#ConEmu_and_clink
 * A **Nerd font** must be installed in Windows (e.g. `CaskaydiaMono`), and configured as font in ConEmu: https://www.nerdfonts.com/font-downloads
-* **Clink** installed for ConEmu: https://conemu.github.io/en/TabCompletion.html#ConEmu_and_clink
-* **WSL 2** installed with a Linux distrib (e.g. `Ubuntu`)
+  * Download a font ZIP file, unzip it, open the folder in explorer, select all `.ttf` files and install them from the right-click menu
+  * In ConEmu settings, set the main console font: https://conemu.github.io/en/SettingsFonts.html
+* **WSL 2** installed with a Linux distrib (e.g. `Ubuntu`): https://learn.microsoft.com/en-us/windows/wsl/install
 
 ## Install
 
