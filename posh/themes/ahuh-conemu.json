@@ -5,8 +5,8 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#888888",
-          "foreground": "#FFFFFF",
+          "background": "#FFFFFF",
+          "foreground": "#767676",
           "leading_powerline_symbol": "\ue0b2",
           "properties": {
             "mapped_shell_names": {
@@ -22,15 +22,15 @@
           "type": "shell"
         },
         {
-          "background": "#AA0000",
-          "foreground": "#FFFF55",
+          "background": "#DA3700",
+          "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " \ued25 ",
           "type": "root"
         },
         {
-          "background": "#00AA00",
+          "background": "#0CC616",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
@@ -38,8 +38,8 @@
           "type": "session"
         },
         {
-          "background": "#0000AA",
-          "foreground": "#ffffff",
+          "background": "#5648E7",
+          "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_icon": "\ueaf7",
@@ -53,8 +53,8 @@
           "type": "path"
         },
         {
-          "background": "#AA00AA",
-          "foreground": "#ffffff",
+          "background": "#981788",
+          "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "cherry_pick_icon": "\u2713 ",
@@ -70,7 +70,7 @@
           "type": "git"
         },
         {
-          "background": "#FF5555",
+          "background": "#FF783B",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
