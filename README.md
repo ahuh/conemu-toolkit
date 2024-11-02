@@ -34,12 +34,13 @@
 
 ### Install prompt for ConEmu / Clink
 
-* In a ConEmu admin CMD, execute these lines to register LUA scripts for Clink and custom prompt with Oh My Posh:
+* In a ConEmu CMD, execute these lines to register LUA scripts for Clink and custom prompt with Oh My Posh:
 
 ```bat
-clink set lua.path "%CONEMU_TOOLKIT_PATH%\lua\module\clink_lib.lua"
-clink set clink.path "%CONEMU_TOOLKIT_PATH%\lua"
+clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
 ```
+
+* Do the same operations to register script of the repo `clink-completions`: https://github.com/vladimir-kotikov/clink-completions?tab=readme-ov-file#using-git
 
 * **BONUS**: if you want to use **ConEmu with Clink in VSCode integrated terminal**, add and adapt the following **User Settings** to your environment:
 
@@ -67,7 +68,7 @@ clink set clink.path "%CONEMU_TOOLKIT_PATH%\lua"
   ```powershell
   # Add shortcut to close shell with Ctrl+D
   Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
-  # ...
+  
   # Register Oh My Posh prompt
   oh-my-posh init pwsh --config "$env:CONEMU_TOOLKIT_PATH/posh/themes/ahuh-conemu.json" | Invoke-Expression
   ```
@@ -84,7 +85,6 @@ clink set clink.path "%CONEMU_TOOLKIT_PATH%\lua"
   * Add prompt at the end of file: https://ohmyposh.dev/docs/installation/prompt
 
   ```shell
-  # ...
   # set PATH so it includes user's private bin if it exists
   if [ -d "$HOME/bin" ] ; then
       PATH="$HOME/bin:$PATH"
@@ -94,7 +94,7 @@ clink set clink.path "%CONEMU_TOOLKIT_PATH%\lua"
   if [ -d "$HOME/.local/bin" ] ; then
       PATH="$HOME/.local/bin:$PATH"
   fi
-  # ...
+
   # Register Oh My Posh prompt
   eval "$(oh-my-posh init bash --config $CONEMU_TOOLKIT_PATH/posh/themes/ahuh-conemu.json)"
   ```

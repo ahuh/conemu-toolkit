@@ -1,4 +1,6 @@
-local lib = require('clink_lib')
+-- Add common args completions for all CET launchers
+
+local lib = require('cet_lib')
 
 local p = clink.argmatcher(
     "_cmd",

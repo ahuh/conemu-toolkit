@@ -1,4 +1,6 @@
-local lib = require('clink_lib')
+-- Add custom args completions for _kitty launcher
+
+local lib = require('cet_lib')
 
 local function get_kitty_dir()
     return os.getenv("APPDATA") .. "\\KiTTY"
