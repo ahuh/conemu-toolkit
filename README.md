@@ -42,7 +42,7 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
 
 * Do the same operations to register script of the repo `clink-completions`: https://github.com/vladimir-kotikov/clink-completions?tab=readme-ov-file#using-git
 
-* **BONUS**: if you want to use **ConEmu with Clink in VSCode integrated terminal**, add and adapt the following **User Settings** to your environment:
+* **BONUS #1**: if you want to use **ConEmu with Clink in VSCode integrated terminal**, add and adapt the following **User Settings** to your environment:
 
 ```json
 {
@@ -58,6 +58,10 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
     "terminal.integrated.fontFamily": "CaskaydiaMono NF"
 }
 ```
+
+* **BONUS #2**: if you want to also use **Clink in Windows Terminal**, change the CMD command line in Terminal settings
+  * Replace the default value... : `%SystemRoot%\System32\cmd.exe`
+  * .. by this value with Clink injection: `%SystemRoot%\System32\cmd.exe /K "%PROGRAMFILES%\ConEmu\ConEmu\clink\clink.bat" inject`
 
 ### Install prompt for Powershell
 
@@ -105,7 +109,7 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
   ```shell
   # ...
   # For the Oh My Posh prompt registration
-  Defaults:%sudo env_keep += "CONEMU_TOOLKIT_PATH"
+  Defaults:%sudo env_keep += "USERPROFILE CONEMU_TOOLKIT_PATH"
   ```
 
   * Reinstall Oh My Posh in WSL for the root user, and update root's bashrc file (see previous step)
