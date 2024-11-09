@@ -144,7 +144,7 @@
 			<value name="ConWnd Height" type="dword" data="00000032"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
-			<value name="Restore2ActiveMon" type="hex" data="01"/>
+			<value name="Restore2ActiveMon" type="hex" data="00"/>
 			<value name="RestoreInactive" type="hex" data="00"/>
 			<value name="QuakeAnimation" type="ulong" data="300"/>
 			<value name="HideCaption" type="hex" data="00"/>
