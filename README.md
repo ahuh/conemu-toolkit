@@ -1,5 +1,7 @@
 # ConEmu Toolkit
 
+![ConEmu with Clink, PWSH, WSL, and Oh My Posh prompt](resources/conemu_screenshot.png)
+
 ## Features
 
 * Provides ConEmu **custom launchers and commands** (BAT / CMD scripts)
