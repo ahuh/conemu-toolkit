@@ -10,18 +10,17 @@
             "cache_duration": "none",
             "mapped_shell_names": {
               "bash": "\ue691",
-              "cmd": "\uf120",
-              "pwsh": "\uebc7",
+              "cmd": "\uf120 ",
+              "pwsh": "\uebc7 ",
               "sh": "\ue691"
             }
           },
-          "template": "{{ .Name }} ",
-          "foreground": "#767676",
+          "template": "{{ .Name }}",
+          "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "background": "#FFFFFF",
           "type": "shell",
-          "style": "powerline",
-          "leading_powerline_symbol": "\ue0b2"
+          "style": "powerline"
         },
         {
           "properties": {
@@ -38,7 +37,7 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " {{ .UserName }}@{{ .HostName }} ",
+          "template": "\uf2be {{ .UserName }}@{{ .HostName }} ",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "background": "#0CC616",
@@ -54,7 +53,7 @@
             "max_depth": 3,
             "style": "agnoster_short"
           },
-          "template": " {{ .Path }} ",
+          "template": "{{ path \"\uea83\" .Location }} \ue0b1 {{ .Path }} ",
           "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "background": "#5648E7",
@@ -98,28 +97,12 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " \uf071 ",
+          "template": "\uf071 ",
           "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "background": "#DA3700",
           "type": "status",
           "style": "powerline"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "right",
-      "overflow": "hide",
-      "segments": [
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "template": " {{ path \"\uf465\" .Location }} {{ if .WSL }}{{ .PWD }}{{else}}{{ .Location }}{{end}}",
-          "foreground": "#0CC616",
-          "type": "path",
-          "style": "plain"
         }
       ]
     },
@@ -131,9 +114,9 @@
           "properties": {
             "cache_duration": "none"
           },
-          "template": " \u2570\u2500\uf054",
+          "template": "<#767676>\u2570\u2500\uf054</> {{ if .WSL }}{{ .PWD }}{{else}}{{ .Location }}{{end}} <#767676>\ue691</>",
           "foreground": "#0CC616",
-          "type": "text",
+          "type": "path",
           "style": "plain"
         }
       ],
