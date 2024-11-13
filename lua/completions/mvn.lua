@@ -67,7 +67,7 @@ end
 -- Initialize the argmatcher.
 -- v1.3.12 and higher receive a command_word parameter as well, which is the
 -- word in the command line that matched this argmatcher.
-local function init_profiles(argmatcher, command_word)
+local function init_profiles(argmatcher, argindex)
     profiles = {}
     map = {}
     for line in io.popen("mvn help:all-profiles 2>nul"):lines() do
@@ -82,7 +82,7 @@ local function init_profiles(argmatcher, command_word)
     end
     profiles["loopchars"] = ","
     profiles["nowordbreakchars"] = ","
-    argmatcher:addarg(profiles)
+    return profiles
 end
 
 -- This function has the opportunity to reset and (re)initialize the argmatcher.
@@ -91,7 +91,7 @@ local function ondelay_init_profiles(argmatcher, command_word)
     if prev_dir ~= dir then             -- When current directory has changed,
         prev_dir = dir                  -- Remember the new current directory,
         argmatcher:reset()              -- Reset the argmatcher,
-        init_profiles(argmatcher, command_word)  -- And re-initialize it.
+        argmatcher:addarg({ delayinit=init_profiles }) -- And re-initialize it.
     end
 end
 
