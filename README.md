@@ -46,7 +46,8 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
 
 * Do the same operations to register MORE scripts:
   * From the repo `clink-completions`: https://github.com/vladimir-kotikov/clink-completions?tab=readme-ov-file#using-git
-  * From the repo `more-clink-completions`: https://github.com/sebthom/more-clink-completions?tab=readme-ov-file#2-install-more-clink-completions
+
+* NOTE: if you made a mistake while registering scripts, use this command to reset registry => `clink uninstallscripts --all`
 
 * **BONUS #1**: if you want to use **ConEmu with Clink in VSCode integrated terminal**, add and adapt the following **User Settings** to your environment:
 
