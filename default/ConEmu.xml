@@ -82,24 +82,6 @@
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
 			<value name="JumpListAutoUpdate" type="hex" data="01"/>
 			<value name="SaveCmdHistory" type="hex" data="01"/>
-			<value name="CmdLineHistory" type="multi">
-				<line data='cmd.exe /k "C:\Program Files\ConEmu\ConEmu\CmdInit.cmd" -cur_console:P:^&lt;ahuh-admin^&gt;'/>
-				<line data='cmd.exe /k "%CEL_CONEMU_INIT_SCRIPT%"'/>
-				<line data="{pwsh}"/>
-				<line data='cmd.exe /k "%CEL_CONEMU_INIT_SCRIPT%" -cur_console:n'/>
-				<line data="{---Helper---::Show ANSI colors}"/>
-				<line data='cmd.exe /k "C:\Program Files\ConEmu\ConEmu\CmdInit.cmd"'/>
-				<line data="{pwsh-admin}"/>
-				<line data="{cmd-admin}"/>
-				<line data="{Tools::Chocolatey (Admin)}"/>
-				<line data="{---Update---::WSL Update}"/>
-				<line data="{cmd}"/>
-				<line data="{kitty-d}"/>
-				<line data="{kitty}"/>
-				<line data="{---Update---::Choco Update}"/>
-				<line data="{wsl}"/>
-				<line data="{---Bash---::WSL bash}"/>
-			</value>
 			<value name="SingleInstance" type="hex" data="01"/>
 			<value name="ShowHelpTooltips" type="hex" data="01"/>
 			<value name="Multi" type="hex" data="01"/>
@@ -627,7 +609,7 @@
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='cmd.exe /k "%CEL_CONEMU_INIT_SCRIPT%"'/>
+					<value name="Cmd1" type="string" data='cmd.exe /k "%ProgramFiles%\ConEmu\ConEmu\CmdInit.cmd"'/>
 				</key>
 				<key name="Task2" modified="2024-10-31 21:29:42" build="230724">
 					<value name="Name" type="string" data="{cmd-admin}"/>
@@ -636,7 +618,7 @@
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='cmd.exe /k "%CEL_CONEMU_INIT_SCRIPT%" -new_console:a'/>
+					<value name="Cmd1" type="string" data='cmd.exe /k "%ProgramFiles%\ConEmu\ConEmu\CmdInit.cmd" -new_console:a'/>
 				</key>
 				<key name="Task3" modified="2024-10-31 21:29:42" build="230724">
 					<value name="Name" type="string" data="{pwsh}"/>
@@ -699,7 +681,7 @@
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='"%windir%\syswow64\cmd.exe" /k "%CEL_CONEMU_INIT_SCRIPT%"'/>
+					<value name="Cmd1" type="string" data='"%windir%\syswow64\cmd.exe" /k "%ProgramFiles%\ConEmu\ConEmu\CmdInit.cmd"'/>
 				</key>
 				<key name="Task10" modified="2024-10-31 21:29:42" build="230724">
 					<value name="Name" type="string" data="{---Shells---::cmd 64/32}"/>
@@ -708,8 +690,8 @@
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="long" data="1"/>
 					<value name="Count" type="long" data="2"/>
-					<value name="Cmd1" type="string" data='&gt; "%windir%\system32\cmd.exe" /k ""%CEL_CONEMU_INIT_SCRIPT%" &amp; echo This is Native cmd.exe"'/>
-					<value name="Cmd2" type="string" data='"%windir%\syswow64\cmd.exe" /k ""%CEL_CONEMU_INIT_SCRIPT%" &amp; echo This is 32 bit cmd.exe -new_console:s50V"'/>
+					<value name="Cmd1" type="string" data='&gt; "%windir%\system32\cmd.exe" /k ""%ProgramFiles%\ConEmu\ConEmu\CmdInit.cmd" &amp; echo This is Native cmd.exe"'/>
+					<value name="Cmd2" type="string" data='"%windir%\syswow64\cmd.exe" /k ""%ProgramFiles%\ConEmu\ConEmu\CmdInit.cmd" &amp; echo This is 32 bit cmd.exe -new_console:s50V"'/>
 				</key>
 				<key name="Task11" modified="2024-10-31 21:29:42" build="230724">
 					<value name="Name" type="string" data="{---Shells---::PowerShell}"/>
@@ -831,4 +813,3 @@
 		</key>
 	</key>
 </key>
-
