@@ -29,6 +29,7 @@
 
 ### Common steps
 
+* In ConEmu configuration, import the default configuration available in this repo (or adapt your configuration to add missing parts): `default/ConEmu.xml`
 * In Windows, set the env var `CONEMU_TOOLKIT_PATH` to this repo path
 * Update the env var `PATH` to add `%CONEMU_TOOLKIT_PATH%\scripts`
 * You may adapt the scripts configuration to your environment, by modifiying the file `scripts\include\config.bat` (automatically created from `config.default.bat` at first custom launcher execution)
@@ -51,20 +52,22 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
 {
     "terminal.integrated.defaultProfile.windows": "ConEmu",
     "terminal.integrated.profiles.windows": {
-        "ConEmu": {
-            "overrideName": true,
-            "path": "${env:windir}\\System32\\cmd.exe",
-            "args": ["/K", "${env:ProgramFiles}\\ConEmu\\ConEmu\\clink\\clink.bat", "inject"],
-            "icon": "terminal"
-        }
+      "ConEmu": {
+        "overrideName": true,
+        "path": "${env:windir}\\System32\\cmd.exe",
+        "args": ["/K", "${env:ProgramFiles}\\ConEmu\\ConEmu\\CmdInit.cmd"],
+        "icon": "terminal"
+      }
     },
     "terminal.integrated.fontFamily": "CaskaydiaMono NF"
 }
 ```
 
-* **BONUS #2**: if you want to also use **Clink in Windows Terminal**, change the CMD command line in Terminal settings
-  * Replace the default value... : `%SystemRoot%\System32\cmd.exe`
-  * .. by this value with Clink injection: `%SystemRoot%\System32\cmd.exe /K "%PROGRAMFILES%\ConEmu\ConEmu\clink\clink.bat" inject`
+* **BONUS #2**: if you want to also use **Clink in Windows Terminal**
+  * Change the CMD command line in Terminal settings
+    * Replace the default value... : `%SystemRoot%\System32\cmd.exe`
+    * .. by this value with Clink injection: `%SystemRoot%\System32\cmd.exe /K "%PROGRAMFILES%\ConEmu\ConEmu\clink\clink.bat" inject`
+  * Select the `CaskaydiaMono NF` font in Terminal settings
 
 ### Install prompt for Powershell
 
@@ -80,7 +83,8 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
   oh-my-posh init pwsh --config "$env:CONEMU_TOOLKIT_PATH/posh/themes/ahuh-conemu.json" | Invoke-Expression
   ```
 
-* **BONUS**: if you want to also use **Powershell in Windows Terminal**, you just have to select the `CaskaydiaMono NF` font in Terminal settings for the custom prompt to work
+* **BONUS**: if you want to also use **Powershell in Windows Terminal**
+  * Select the `CaskaydiaMono NF` font in Terminal settings
 
 ### Install prompt for WSL
 
@@ -110,11 +114,13 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
   * First you will need to pass the env var to the root user, by modifying the sudoers configuration: `sudo visudo`
 
   ```shell
-  # ...
-  # For the Oh My Posh prompt registration
-  Defaults:%sudo env_keep += "USERPROFILE CONEMU_TOOLKIT_PATH"
+  sudo su
+  cd /etc/sudoers.d
+  echo "# For the Oh My Posh prompt registration" > prompt-posh
+  echo "Defaults:%sudo env_keep += \"USERPROFILE CONEMU_TOOLKIT_PATH\"" >> prompt-posh
   ```
 
   * Reinstall Oh My Posh in WSL for the root user, and update root's bashrc file (see previous step)
 
-* **BONUS**: if you want to also use **WSL in Windows Terminal**, you just have to select the `CaskaydiaMono NF` font in Terminal settings for the custom prompt to work
+* **BONUS**: if you want to also use **WSL in Windows Terminal**
+  * Select the `CaskaydiaMono NF` font in Terminal settings
