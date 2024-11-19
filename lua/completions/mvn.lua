@@ -64,15 +64,6 @@ local function colorize_maven_goals(arg_index, word, word_index, line_state, cla
     end
 end
 
-local function sort_table(tbl)
-    output = {}
-    for k,v in pairs(tbl) do
-        table.insert(output, v)
-    end
-    table.sort(output)
-    return output
-end
-
 -- Initialize the argmatcher.
 -- v1.3.12 and higher receive a command_word parameter as well, which is the
 -- word in the command line that matched this argmatcher.
@@ -89,10 +80,8 @@ local function init_profiles(argmatcher, command_word)
             end
         end
     end
-    if profiles then
-        -- Sort profiles alphabeticallyy
-        sort_table(profiles)
-    end
+    profiles["loopchars"] = ","
+    profiles["nowordbreakchars"] = ","
     argmatcher:addarg(profiles)
 end
 
