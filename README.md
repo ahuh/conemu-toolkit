@@ -6,8 +6,9 @@
 
 * Provides ConEmu **custom launchers and commands** (BAT / CMD scripts)
 * Provides **SSH client** with GUI **directly integrated** in ConEmu, using KiTTY
-* Provides **autocomplete for custom launchers** in ConEmu with LUA scripts, using Clink (*mvn with dynamic profiles completion, ...*)
-* Provides **more autocompletion** support for Clink from other GitHub repositories (*choco, git, java, mvn, kubectl, ...*)
+* Provides **custom launchers** with batch files (*update WSL distrib, update choco packages, open new terminal tab with split-screen, ...*)
+* Provides **autocomplete** in ConEmu with LUA scripts, using Clink (*mvn with dynamic profiles completion, ...*)
+* Provides **more autocompletion** support for Clink from other GitHub repositories (*choco, git, java, kubectl, ...*)
 * Provides a **custom prompt** in ConEmu (CMD / Clink, Powershell & WSL) with python and git integration, using Oh My Posh
 * Provides a **default ConEmu configuration** file, wrapping all components together
 
