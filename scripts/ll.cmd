@@ -1,2 +1,2 @@
 @echo off
-ls -al --color %1
+ls -al --color %*
