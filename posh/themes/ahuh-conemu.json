@@ -93,6 +93,32 @@
         }
       ],
       "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "overflow": "hide",
+      "segments": [
+        {
+          "foreground": "#0CC616",
+          "style": "plain",
+          "template": " {{ path \"\uf465\" .Location }} {{ if .WSL }}{{ .PWD }}{{else}}{{ .Location }}{{end}}",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#0CC616",
+          "style": "plain",
+          "template": " \u2570\u2500\uf054",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
     }
   ],
   "final_space": true,
