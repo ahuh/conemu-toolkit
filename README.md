@@ -94,27 +94,32 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
 
 * In Windows, set the env var `WSLENV`: https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/
   * Add `USERPROFILE/p:CONEMU_TOOLKIT_PATH/p` to the `:` separated list (if exists)
-* Install Oh My Posh in WSL, by following the steps in the documentation: https://ohmyposh.dev/docs/installation/linux
-* In WSL, use your preferred editor to modify the bashrc file: `nano ~/.bashrc`
-  * Load local binaries,
-  * Add prompt at the end of file: https://ohmyposh.dev/docs/installation/prompt
+* Install Oh My Posh in WSL:
+  * Install in a shared dir, to be used for local user and root (reference: https://ohmyposh.dev/docs/installation/linux):
 
   ```shell
-  # set PATH so it includes user's private bin if it exists
-  if [ -d "$HOME/bin" ] ; then
-      PATH="$HOME/bin:$PATH"
-  fi
+  # Create shared dir for 'Oh My Posh' install
+  sudo mkdir -p /opt/ohmyposh
+  sudo chown -R $(id -u):$(id -g) /opt/ohmyposh
+  sudo chmod 775 /opt/ohmyposh
+  
+  # Install 'Oh My Posh'
+  # Ignore the warning about PATH env var
+  curl -s https://ohmyposh.dev/install.sh | bash -s -- -d /opt/ohmyposh
 
-  # set PATH so it includes user's private bin if it exists
-  if [ -d "$HOME/.local/bin" ] ; then
-      PATH="$HOME/.local/bin:$PATH"
-  fi
+  # Add user common link to 'Oh My Posh' executable
+  sudo ln -s /opt/ohmyposh/oh-my-posh /usr/local/bin/
+  ```
 
-  # Register Oh My Posh prompt
+* In WSL, use your preferred editor to modify the bashrc file: `nano ~/.bashrc`
+  * Add prompt at the end of file (reference: https://ohmyposh.dev/docs/installation/prompt):
+
+  ```shell
+  # Register 'Oh My Posh' prompt
   eval "$(oh-my-posh init bash --config $CONEMU_TOOLKIT_PATH/posh/themes/ahuh-conemu.json)"
   ```
 
-* In WSL, repeat operation to install and configure Oh My Posh for root user: `sudo su`
+* In WSL, repeat operation to configure 'Oh My Posh' for root user: `sudo su`
   * First you will need to pass the env var to the root user, by modifying the sudoers configuration: `sudo visudo`
 
   ```shell
@@ -124,7 +129,7 @@ clink installscripts "%CONEMU_TOOLKIT_PATH%\lua"
   echo "Defaults:%sudo env_keep += \"USERPROFILE CONEMU_TOOLKIT_PATH\"" >> prompt-posh
   ```
 
-  * Reinstall Oh My Posh in WSL for the root user, and update root's bashrc file (see previous step)
+  * Update root's bashrc file to add prompt at the end of file (see previous step)
 
 * **BONUS**: if you want to also use **WSL in Windows Terminal**
   * Select the `CaskaydiaMono NF` font in Terminal settings
