@@ -76,6 +76,17 @@
         },
         {
           "properties": {
+            "parse_kubeconfig": true
+          },
+          "template": "\uf333 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+          "foreground": "#000000",
+          "powerline_symbol": "\ue0b0",
+          "background": "#fff01e",
+          "type": "kubectl",
+          "style": "powerline"
+        },
+        {
+          "properties": {
             "branch_icon": "\ue725 ",
             "cache_duration": "none",
             "cherry_pick_icon": "✓ ",
