@@ -1,5 +1,8 @@
 @echo off
 
+@REM # To use in a shortcut: specify this target in the shortcut
+@REM # "C:\Program Files\ConEmu\ConEmu64.exe" -tsa -min -run -new_console:bn start_once ...
+
 SET HELP_MODE=
 IF "%~1"=="" SET HELP_MODE=1
 IF "%~1"=="-h" SET HELP_MODE=1
