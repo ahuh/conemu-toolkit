@@ -8,8 +8,18 @@ call %~dp0config.bat
 
 @REM Handle split argument
 set "CEL_SPLIT_ARG="
-if "%1"=="+" (
-    set "CEL_SPLIT_ARG=sH"
-) else if "%1"=="-" (
-    set "CEL_SPLIT_ARG=sV"
+if "%CEL_TERM_CLIENT%"=="CONEMU" (
+    if "%1"=="+" (
+        set "CEL_SPLIT_ARG=sH"
+    ) else if "%1"=="-" (
+        set "CEL_SPLIT_ARG=sV"
+    )
+) else if "%CEL_TERM_CLIENT%"=="WT" (
+    if "%1"=="+" (
+        set "CEL_SPLIT_ARG=sp -V"
+    ) else if "%1"=="-" (
+        set "CEL_SPLIT_ARG=sp -H"
+    ) else (
+        set "CEL_SPLIT_ARG=nt"
+    )
 )
