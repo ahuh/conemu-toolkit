@@ -41,14 +41,14 @@
         "list": 
         [
             {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe /K \"%PROGRAMFILES%\\ConEmu\\ConEmu\\clink\\clink.bat\" inject",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "cmd"
             },
             {
                 "background": "#370001",
-                "commandline": "%SystemRoot%\\System32\\cmd.exe /K \"%PROGRAMFILES%\\ConEmu\\ConEmu\\clink\\clink.bat\" inject",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "elevate": true,
                 "guid": "{b9b7da9f-5918-42d3-bd67-5673247a2ff6}",
                 "hidden": false,

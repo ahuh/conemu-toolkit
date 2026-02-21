@@ -21,7 +21,7 @@
   * **Git** → Free and open source distributed version control system: https://git-scm.com/
   * **Oh My Posh** → A prompt theme engine for any shell: https://ohmyposh.dev/
   * **KiTTY** → fork of PuTTY telnet / SSH client with new features: http://www.9bis.net/kitty
-* `clink` installed for ConEmu:
+* `clink` installed:
   * **Clink** → Bash's powerful command line editing in cmd.exe: https://github.com/chrisant996/clink
   * ConEmu integration: https://conemu.github.io/en/TabCompletion.html#ConEmu_and_clink
 * **WSL 2** installed with a Linux distrib (e.g. `Ubuntu`): https://learn.microsoft.com/en-us/windows/wsl/install
@@ -47,10 +47,8 @@
 
 * Prerequisite: install Clink for CMD
   * If you want to use **Clink in ConEmu**, use the default configuration `default/conemu/ConEmu.xml`
-  * If you want to use **Clink in Windows Terminal** (already configured in the default configuration `default/wt/settings.json`)
-    * Change the CMD command line in Terminal settings
-      * Replace the default value... : `%SystemRoot%\System32\cmd.exe`
-      * .. by this value with Clink injection: `%SystemRoot%\System32\cmd.exe /K "%PROGRAMFILES%\ConEmu\ConEmu\clink\clink.bat" inject`
+  * If you want to use **Clink in Windows Terminal**
+    * In CMD, in the clink install dir, execute the command: `clink autorun install`
     * Select the `CaskaydiaMono NF` font in Terminal settings
 
 * In a CMD, execute these lines to register LUA scripts for Clink and custom prompt with **Oh My Posh**:
