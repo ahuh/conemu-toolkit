@@ -93,16 +93,6 @@
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
                 "name": "powershell-admin"
-            },
-            {
-                "colorScheme": "Ubuntu-ColorScheme",
-                "commandline": "C:\\WINDOWS\\system32\\wsl.exe -d Ubuntu bash -i -c \"sudo apt update; sudo apt upgrade -y; sudo apt autoremove -y; read -p 'Press Enter to exit ...'\"",
-                "guid": "{2653b087-e137-40b9-98e7-ea4871b7636d}",
-                "hidden": true,
-                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
-                "name": "wsl-update",
-                "pathTranslationStyle": "wsl",
-                "startingDirectory": "~"
             }
         ]
     },

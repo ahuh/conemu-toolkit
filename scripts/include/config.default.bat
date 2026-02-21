@@ -19,7 +19,6 @@ set "CEL_WT_CMD_ADMIN_PROFILE=cmd-admin"
 set "CEL_WT_PWSH_PROFILE=pwsh"
 set "CEL_WT_PWSH_ADMIN_PROFILE=pwsh-admin"
 set "CEL_WT_WSL_PROFILE=wsl"
-set "CEL_WT_WSL_UPDATE_PROFILE=wsl-update"
 
 @REM # Common configuration
 set "CEL_KITTY_PATH=%ProgramData%\chocolatey\lib\kitty\tools\kitty.exe"
