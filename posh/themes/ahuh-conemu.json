@@ -70,7 +70,7 @@
           "template": "\ue235 {{ if .Venv }}{{ .Venv }} {{ end }}",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
-          "background": "#d6d661",
+          "background": "#C78836",
           "type": "python",
           "style": "powerline"
         },
