@@ -41,6 +41,8 @@
 * You may adapt the scripts configuration to your environment, by modifiying the file `scripts\include\config.bat` (automatically created from `config.default.bat` at first custom launcher execution)
   * In `scripts\include\config.bat`, choose the terminal client to use: `CEL_TERM_CLIENT` = `CONEMU` or `WT`
 
+*NOTE*: if Windows Terminal hangs in the Windows task bar after close, remove this configuration key => `"compatibility.allowHeadless": true`
+
 ### Install prompt for CMD
 
 * Prerequisite: install Clink for CMD
