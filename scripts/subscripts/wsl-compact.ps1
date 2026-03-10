@@ -1,2 +1,2 @@
-wslcompact -c -y $args[0]
+wslcompact -c -d -y
 pause
