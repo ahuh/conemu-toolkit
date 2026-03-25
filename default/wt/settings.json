@@ -1,7 +1,41 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [],
+    "actions": [
+        {
+            "command":
+            {
+                "action": "multipleActions",
+                "actions":
+                [
+                    {
+                        "action": "splitPane",
+                        "size": 0.1,
+                        "split": "up",
+                        "splitMode": "duplicate"
+                    },
+                    {
+                        "action": "moveFocus",
+                        "direction": "previous"
+                    },
+                    {
+                        "action": "closePane"
+                    }
+
+                ]
+            },
+            "name": "Restart tab",
+            "id": "User.restartTab"
+        },
+        {
+            "command":
+            {
+                "action": "restartConnection"
+            },
+            "name": "Restart connection",
+            "id": "User.restartConnection"
+        }
+    ],
     "compatibility.allowHeadless": true,
     "copyFormatting": "none",
     "copyOnSelect": true,
@@ -19,6 +53,10 @@
         {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.restartConnection",
+            "keys": "ctrl+\u00b2"
         }
     ],
     "language": "en-US",
